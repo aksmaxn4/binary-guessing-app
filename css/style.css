@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    animation: background-anim 3s ease infinite;
+    background-size: 600% 600%;
+    background: linear-gradient(25deg, #4866b2, #9341d5, #3064e6);
+    -webkit-animation: background-anim 3s ease infinite;
+    -moz-animation: background-anim 3s ease infinite;
+    background-attachment: fixed;
+    
+}
+
+.mode-1{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    height: 33vh;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+.rules-container{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 25px;
+    padding: 0;
+}
+#start{
+    width: 25%;
+    align-self: center;
+    color: black
+}
+
+.input-rules{
+    display: flex;
+    justify-content: space-around;
+}
+
+.hidden{
+    display: none;
+}
+
+.form_radio_btn {
+	display: inline-block;
+	margin-right: 10px;
+    
+}
+.form_radio_btn input[type=radio] {
+	display: none;
+    
+}
+.form_radio_btn label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	user-select: none;
+    
+}
+.fl{
+    width: 25%;
+}
+
+.hint{
+  width: 40%;
+}
+
+
+#buttons-hints{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.computers-guess{
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px;
+    line-height: 2.5rem;
+}
+.rules-container input[type=number],
+.guessing-field input[type=number]{
+    width: 33%;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    font-family:inherit;
+  font-size: inherit;
+}
+
+#label-user-guess{
+  margin-right: 10px;
+}
+
+span{
+  line-height: 1rem;
+}
+ 
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+	background: #ba77f9;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	color: rgb(108, 69, 69);
+}
+ 
+.sliding-button {
+    text-decoration: none;
+    color: rgb(241, 157, 157);
+    display: inline-block;
+    position: relative;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    border-image-slice: 1;
+    margin: 10px 20px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+  .sliding-button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+  }
+  .sliding-button:hover {
+    background: rgba(255, 255, 255, 0);
+  }
+  .sliding-button:hover:before {
+    bottom: 0%;
+    top: auto;
+    height: 100%;
+  }
+
+  .output{
+    align-self: center;
+  }
+
+  .used-numbers{
+    display: flex;
+  }
+  .mode-2{
+    height: 60vh;
+  }
+
+  .start-again{
+    text-align: center;
+  }
+
+  @keyframes background-anim {
+    0%{background-position:71% 0%}
+    50%{background-position:30% 100%}
+    100%{background-position:71% 0%}
+}
+@-webkit-keyframes background-anim {
+    0%{background-position:71% 0%}
+    50%{background-position:30% 100%}
+    100%{background-position:71% 0%}
+}
+@-moz-keyframes background-anim {
+    0%{background-position:71% 0%}
+    50%{background-position:30% 100%}
+    100%{background-position:71% 0%}
+}
+
+  @media only screen and (max-width: 500px) {
+    body {
+      overflow-x: scroll;
+    }
+  }

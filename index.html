@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BinaryGuessing Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h2>Binary Guessing Game</h2>
+        <div class="game-mode">
+            <div class="form_radio_btn">
+                <input id="radio-1" type="radio" name="radio" value="1" checked>
+                <label for="radio-1">Game Mode 1</label>
+            </div>
+            <div class="form_radio_btn">
+                <input id="radio-2" type="radio" name="radio" value="2">
+                <label for="radio-2">Game Mode 2</label>
+            </div>
+        </div>
+        <p class="rules">Computer thinks a number in a given range. User should guess the number with hints lower/higher.</p>
+    </header>
+    <div class="rules-container">
+        <div class="input-rules">
+            <label for="min-number">Input a minimum number</label>
+            <input type="number" id="min-number">
+        </div>
+        <div class="input-rules">
+            <label for="max-number">Input a maximum number</label>
+            <input type="number" id="max-number">
+        </div>
+        <span class="output hidden"></span>
+        <button id="start" class="sliding-button">Start a game</button>
+    </div>
+    <div  class="hidden start-again">   
+        <button id="start-again" class="sliding-button">Start again</button>
+    </div>
+    <div class="guessing-field mode-1 hidden">
+        <div class="check-btn">
+            <label id="label-user-guess" for="user-guess">Input your guess </label>
+            <input type="number" id="user-guess">
+            <button id="check" class="sliding-button">Check</button>
+        </div>        
+        <p class="hint"></p>
+        <span class="used-numbers"></span>      
+    </div>
+    <div class="guessing-field mode-2 hidden">
+        <span class="computers-guess"></span>
+        <div id="buttons-hints">
+            <button id="lower" class="sliding-button fl">Lower</button>
+            <button id="higher" class="sliding-button fl">Higher</button>
+            <button id="correct" class="sliding-button fl">Correct</button>
+        </div>        
+    </div>
+    
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
